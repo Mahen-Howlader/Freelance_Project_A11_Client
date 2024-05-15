@@ -122,7 +122,7 @@ function Assignmentdetails() {
                       htmlFor="link"
                       className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
-                      Your assignment link
+                      Your assignment pdf/docs link
                     </label>
                     <input
                       type="text"

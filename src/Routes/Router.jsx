@@ -11,6 +11,7 @@ import Registe from "../Page/Authentication/Registe";
 import Assignmentdetails from "../Page/Allassignment/Assignmentdetails";
 import Updatepage from "../component/Updatepage";
 import Privaterouter from "./Privaterouter";
+import Profile from "../component/Profile";
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
       {
         path: "/updatepage/:id",
         element: <Privaterouter><Updatepage></Updatepage></Privaterouter>,
+      },
+      {
+        path: "/profile",
+        element: <Privaterouter><Profile></Profile></Privaterouter>,
       },
     ],
   },
