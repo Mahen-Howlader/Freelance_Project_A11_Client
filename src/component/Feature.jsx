@@ -5,22 +5,24 @@ import Loading from "./Loading";
 
 function Feature() {
   const [alldata, setAllData] = useState([]);
-  const [dataloading,setDataLoading] = useState(false)
+  const [dataloading, setDataLoading] = useState(false);
 
   const getalldata = async () => {
-    setDataLoading(true)
+    setDataLoading(true);
     const { data } = await axios(
-      `https://assignment-project-kappa.vercel.app/allproject`
+      `https://assignment-project-kappa.vercel.app/fetures`
     );
     setAllData(data);
     console.log(data);
-    setDataLoading(false)
+    setDataLoading(false);
   };
 
   useEffect(() => {
     getalldata();
   }, []);
-  if(dataloading) return <Loading></Loading>
+
+  console.log(alldata);
+  // if(dataloading) return <Loading></Loading>
 
   return (
     <section className="py-12  rounded-xl text-black sm:py-12 lg:py-16">
@@ -36,14 +38,14 @@ function Feature() {
         </div>
 
         <div className="grid gap-10  grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {alldata.slice(0,5).map((data) => (
-          <Feturescard
-            key={data._id}
-            getalldata={getalldata}
-            data={data}
-          ></Feturescard>
-        ))}
-      </div>
+          {alldata.map((data) => (
+            <Feturescard
+              key={data._id}
+              getalldata={getalldata}
+              data={data}
+            ></Feturescard>
+          ))}
+        </div>
       </div>
     </section>
   );
