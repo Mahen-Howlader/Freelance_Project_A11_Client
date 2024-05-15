@@ -20,7 +20,7 @@ function Allassignment() {
   const getalldata = async () => {
     setDataLoading(true);
     const { data } = await axios(
-      `http://localhost:3000/allproject?page=${currentPage}&size=${itemPerPage}&filter=${filter}&sort=${ascdec}&search=${search}`
+      `https://assignment-project-kappa.vercel.app/allproject?page=${currentPage}&size=${itemPerPage}&filter=${filter}&sort=${ascdec}&search=${search}`
     );
     setAllData(data);
     setDataLoading(false);
