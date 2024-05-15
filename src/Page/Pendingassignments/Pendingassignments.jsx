@@ -60,7 +60,7 @@ function Pendingassignments() {
   };
   return (
     <div className="my-10 my-10 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 pr-10 lg:px-8">
-      <div className="align-middle inline-block min-w-full shadow overflow-hidden bg-white shadow-dashboard px-8 pt-3 rounded-bl-lg rounded-br-lg">
+      <div className="align-middle inline-block min-w-full shadow overflow-hidden py-5 bg-white shadow-dashboard px-8 pt-3 rounded-bl-lg rounded-br-lg">
         <div className="flex justify-center">
           <span className="text-3xl text-center mb-7 border-b-black  font-semibold uppercase border-b-2 pb-1">
             Pending assignments
@@ -187,7 +187,6 @@ function Pendingassignments() {
           </tbody>
           <tfoot></tfoot>
         </table>
-    
       </div>
     </div>
   );

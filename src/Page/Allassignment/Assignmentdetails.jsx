@@ -20,7 +20,7 @@ function Assignmentdetails() {
     getDataFun();
   }, [id]);
 
-  const { title, thumbnail, marks, level, description, bayer } =
+  const { title, thumbnail, marks, level,dateline, description, bayer } =
     detailsData || {};
   // title, assignment status, assignment marks, your
   // obtained marks,
@@ -28,7 +28,8 @@ function Assignmentdetails() {
     e.preventDefault();
     const form = e.target;
     if (user?.email === bayer?.bayerEmail) {
-      return toast.success("Permision not allow");
+      document.getElementById("my_modal_3").close()
+      return toast.error("Your assignment permision not allow");
     }
     const link = e.target.link.value;
     const name = e.target.name.value;
@@ -54,13 +55,13 @@ function Assignmentdetails() {
       console.log(err);
     }
   }
-
+console.log(detailsData)
   return (
     <div>
       <div className="dark:bg-gray-100 shadow-2xl rounded-lg my-10 dark:text-gray-800">
         <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm dark:bg-gray-50">
           <div className="">
-            <span className="text-sm dark:text-gray-600">Jun 1, 2020</span>
+            <span className="text-sm dark:text-gray-600">{new Date(dateline).toLocaleDateString()}</span>
           </div>
           <div className="flex items-center justify-between">
             <span className="text-sm dark:text-gray-600">Level : {level}</span>
@@ -95,7 +96,6 @@ function Assignmentdetails() {
             <dialog id="my_modal_3" className="modal">
               <div className="modal-box">
                 <form method="dialog">
-                  {/* if there is a button in form, it will close the modal */}
                   <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
                     ✕
                   </button>

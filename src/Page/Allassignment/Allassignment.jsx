@@ -9,14 +9,12 @@ function Allassignment() {
   const [ascdec, setAscDec] = useState("");
   const [dataloading, setDataLoading] = useState(false);
   const { count } = useLoaderData();
-  const [searchText,setSearchText] = useState("")
+  const [searchText, setSearchText] = useState("");
   const [search, setSearch] = useState("");
-  // const itemPerPage = 2;
   const [currentPage, setCurrentPage] = useState(0);
   const [itemPerPage, setItemPerPage] = useState(5);
   const numberOfPage = Math.ceil(count / itemPerPage);
-  // console.log(ascdec)
-  console.log(alldata);
+
   const pages = [...Array(numberOfPage).keys()];
 
   const getalldata = async () => {
@@ -43,8 +41,6 @@ function Allassignment() {
     getalldata();
   }, [currentPage, filter, itemPerPage, ascdec, search]);
 
-  if (dataloading) return <Loading></Loading>;
-
   function handelchoosenum(e) {
     const val = parseInt(e.target.value);
     setItemPerPage(val);
@@ -62,6 +58,8 @@ function Allassignment() {
     e.preventDefault();
     setSearch(searchText);
   }
+
+  if(dataloading) return <Loading></Loading>
 
 
   return (
@@ -123,9 +121,9 @@ function Allassignment() {
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           >
             <option value="">Choose Assignment Difficulty Level</option>
-            <option value="Easy">Easy</option>
-            <option value="Medium">Medium</option>
-            <option value="Hard">Hard</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="dard">Hard</option>
           </select>
         </div>
         <button

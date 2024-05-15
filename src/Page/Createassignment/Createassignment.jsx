@@ -15,7 +15,7 @@ function Createassignment() {
     const title = e.target.title.value;
     const thumbnail = e.target.thumbnail.value;
     const email = e.target.email.value;
-    const marks = e.target.marks.value;
+    const marks = parseInt(e.target.marks.value);
     const level = e.target.difficulty.value;
     const description = e.target.description.value;
     const dateline = startDate;

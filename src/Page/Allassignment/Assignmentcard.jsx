@@ -45,7 +45,7 @@ function Assignmentcard({ data, getalldata }) {
       <div className=" bg-white border shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
           <img
-            className="rounded-t-lg w-full h-full object-cover"
+            className="rounded-t-lg w-full min-h-[250px] max-h-[250px] "
             src={thumbnail}
             alt=""
           />
