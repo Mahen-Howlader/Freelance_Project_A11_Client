@@ -65,15 +65,15 @@ function Allassignment() {
 
   return (
     <div className="my-10">
-      <div className="flex items-center gap-x-4 justify-end mb-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 items-center gap-x-4  mb-5">
         {/* search  */}
         <form
           onSubmit={handelSearch}
-          className="relative w-full max-w-xl mx-auto bg-white rounded-full"
+          className="relative w-full max-w-xl mx-auto lg:col-span-2 bg-white rounded-full"
         >
           <input
             placeholder="e.g. Blog"
-            className="rounded-full w-full h-16 bg-transparent py-2 pl-8 pr-32 outline-none border-2 border-gray-100 shadow-md focus:ring-teal-200 focus:border-teal-200"
+            className="rounded-full  w-full h-16 bg-transparent py-2 pl-8 pr-32 outline-none border-2 border-gray-100 shadow-md focus:ring-teal-200 focus:border-teal-200"
             type="text"
             name="search"
             id="search"
@@ -100,7 +100,7 @@ function Allassignment() {
             Search
           </button>
         </form>
-        <div className=" w-2/6">
+        <div className=" lg:col-span-1  w-full">
           <select
             id="ascdec"
             onChange={(e) => setAscDec(e.target.value)}
@@ -113,7 +113,7 @@ function Allassignment() {
             <option value="asc">Ascending order</option>
           </select>
         </div>
-        <div className=" w-2/6">
+        <div className=" lg:col-span-1  w-full">
           <select
             id="countries"
             onChange={(e) => setFilter(e.target.value)}
@@ -129,12 +129,12 @@ function Allassignment() {
         </div>
         <button
           onClick={handelreset}
-          className="btn bg-blue-700 font-semibold hover:bg-red-700 text-white"
+          className="btn lg:col-span-1  bg-blue-700 font-semibold hover:bg-red-700 text-white"
         >
           Reset
         </button>
       </div>
-      <div className="grid gap-10  grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-10   grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {alldata.map((data) => (
           <Assignmentcard
             key={data._id}
