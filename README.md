@@ -31,14 +31,3 @@ npm install
 // Run the project
 npm run dev
 ```
-
-## npm Package Using
-
-
-- [Framer-motion](https://www.framer.com/motion/)
-- [Lottie](https://www.npmjs.com/package/lottie-react)
-- [React toastify](https://www.npmjs.com/package/react-toastify)
-- [React helmet](https://www.npmjs.com/package/react-helmet-async)
-- [React typewriter](https://www.npmjs.com/package/react-simple-typewriter)
-- [SweetAlert2](https://sweetalert2.github.io/#examples)
-- [React FAST Marquee](https://www.react-fast-marquee.com/)
